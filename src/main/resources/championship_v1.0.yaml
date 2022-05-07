@@ -1,0 +1,198 @@
+openapi: 3.0.1
+info:
+  title: Championnat
+  contact:
+    email: dfrances@afdtech.com
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  version: 1.0.0
+externalDocs:
+  description: Find out more about Swagger
+  url: http://swagger.io
+servers:
+  - url: https://petstore.swagger.io/v2
+  - url: http://petstore.swagger.io/v2
+paths:
+  /championships:
+    get:
+      summary: Get championship list
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ChampionshipListDTO'
+    post:
+      summary: Create a championship
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ChampionshipToCreateDTO'
+      responses:
+        '201':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ChampionshipDTO'
+  /championships/{idChampionship}:
+    get:
+      summary: Get championship by id
+      parameters:
+        - name: idChampionship
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ChampionshipDTO'
+  /championships/{idChampionship}/rounds:
+    post:
+      summary: Create a round
+      parameters:
+        - name: idChampionship
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RoundToCreateDTO'
+      responses:
+        '201':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ChampionshipDTO'
+  /championships/{idChampionship}/rounds/{idRound}/rankings:
+    post:
+      summary: Create a ranking
+      parameters:
+        - name: idChampionship
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: idRound
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RankingToCreateDTO'
+      responses:
+        '201':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ChampionshipDTO'
+components:
+  schemas:
+    RankingToCreateDTO:
+      type: object
+      properties:
+        ranking:
+          $ref: '#/components/schemas/Ranking'
+    RoundToCreateDTO:
+      type: object
+      properties:
+        date:
+          type: string
+          format: date-time
+    ChampionshipToCreateDTO:
+      type: object
+      properties:
+        name:
+          type: string
+        startDate:
+          type: string
+          format: date-time
+        endDate:
+          type: string
+          format: date-time
+    ChampionshipListDTO:
+      type: array
+      items:
+        $ref: '#/components/schemas/ChampionshipDTO'
+    ChampionshipDTO:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        startDate:
+          type: string
+          format: date-time
+        endDate:
+          type: string
+          format: date-time
+        state:
+          type: string
+          enum:
+            - PLANNED
+            - ONGOING
+            - FINISHED
+        rounds:
+          type: array
+          items:
+            $ref: '#/components/schemas/Round'
+        ranking:
+          $ref: '#/components/schemas/Ranking'
+    Round:
+      type: object
+      properties:
+        date:
+          type: string
+          format: date-time
+        attendees:
+          type: array
+          items:
+            $ref: '#/components/schemas/Person'
+        players:
+          type: array
+          items:
+            $ref: '#/components/schemas/Person'
+        ranking:
+          $ref: '#/components/schemas/Ranking'
+    Ranking:
+      type: array
+      items:
+        $ref: '#/components/schemas/Rank'
+    Person:
+      type: object
+      properties:
+        firstName:
+          type: string
+        lastName:
+          type: string
+        email:
+          type: string
+        phoneNumber:
+          type: string
+        pseudo:
+          type: string
+    Rank:
+      type: object
+      properties:
+        rank:
+          type: integer
+        attendee:
+          $ref: '#/components/schemas/Person'
+        points:
+          type: integer
