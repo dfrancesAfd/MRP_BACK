@@ -1,0 +1,22 @@
+version: '3.1'
+
+services:
+  mongo:
+    image: mongo
+    restart: always
+    ports:
+      - 27017:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: mrp-user
+      MONGO_INITDB_ROOT_PASSWORD: mrppass*J
+
+  mongo-express:
+    image: mongo-express
+    restart: always
+    ports:
+      - 8081:8081
+
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: mrp-user
+      ME_CONFIG_MONGODB_ADMINPASSWORD: mrppass*J
+      ME_CONFIG_MONGODB_URL: mongodb://mrp-user:mrppass*J@mongo:27017/

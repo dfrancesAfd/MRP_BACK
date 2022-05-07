@@ -1,0 +1,5 @@
+/home/symartinez/MRP_BACK/src/test/java/com/mrp/app/domain/championship/steps/ChampionshipSteps.java
+/home/symartinez/MRP_BACK/src/test/java/com/mrp/app/configurations/CucumberSpringContextConfiguration.java
+/home/symartinez/MRP_BACK/src/test/java/com/mrp/app/AppApplicationTests.java
+/home/symartinez/MRP_BACK/src/test/java/com/mrp/app/CucumberTest.java
+/home/symartinez/MRP_BACK/src/test/java/com/mrp/app/domain/championship/mapper/ChampionshipMapper.java

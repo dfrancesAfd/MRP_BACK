@@ -1,0 +1,12 @@
+src/main/java/com/mrp/app/api/ApiUtil.java
+src/main/java/com/mrp/app/api/ChampionshipsApi.java
+src/main/java/com/mrp/app/api/ChampionshipsApiController.java
+src/main/java/com/mrp/app/api/ChampionshipsApiDelegate.java
+src/main/java/com/mrp/app/domain/model/ChampionshipDTO.java
+src/main/java/com/mrp/app/domain/model/ChampionshipState.java
+src/main/java/com/mrp/app/domain/model/ChampionshipToCreateDTO.java
+src/main/java/com/mrp/app/domain/model/Person.java
+src/main/java/com/mrp/app/domain/model/Rank.java
+src/main/java/com/mrp/app/domain/model/RankingToCreateDTO.java
+src/main/java/com/mrp/app/domain/model/Round.java
+src/main/java/com/mrp/app/domain/model/RoundToCreateDTO.java

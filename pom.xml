@@ -144,7 +144,7 @@
 						</goals>
 						<configuration>
 							<inputSpec>
-								${project.basedir}/src/main/resources/Championship.yaml
+								${project.basedir}/src/main/resources/championship_v1.0.yaml
 							</inputSpec>
 							<generatorName>spring</generatorName>
 							<apiPackage>com.mrp.app.api</apiPackage>
