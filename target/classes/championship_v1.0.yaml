@@ -113,7 +113,6 @@ components:
       properties:
         date:
           type: string
-          format: date-time
     ChampionshipToCreateDTO:
       type: object
       properties:
@@ -121,10 +120,8 @@ components:
           type: string
         startDate:
           type: string
-          format: date-time
         endDate:
           type: string
-          format: date-time
     ChampionshipListDTO:
       type: array
       items:
@@ -144,10 +141,8 @@ components:
           type: string
         startDate:
           type: string
-          format: date-time
         endDate:
           type: string
-          format: date-time
         state:
           $ref: '#/components/schemas/ChampionshipState'
         rounds:
@@ -161,7 +156,6 @@ components:
       properties:
         date:
           type: string
-          format: date-time
         attendees:
           type: array
           items:

@@ -1,0 +1,16 @@
+spring:
+  main:
+    banner-mode: off
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: mrp
+      username: mrp-user
+      password: mrppass*J
+      authentication-database: admin
+
+logging.level.org.springframework.data.mongodb:
+  repository.Query: DEBUG
+  core.MongoTemplate: DEBUG
+

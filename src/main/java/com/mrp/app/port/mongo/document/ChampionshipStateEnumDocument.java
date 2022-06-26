@@ -1,10 +1,6 @@
-package com.mrp.app.domain.championship.model;
+package com.mrp.app.port.mongo.document;
 
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
-import com.mrp.app.domain.model.ChampionshipState;
-
-public enum ChampionshipStateEnum {
+public enum ChampionshipStateEnumDocument {
     PLANNED("PLANNED"),
 
     ONGOING("ONGOING"),
@@ -13,7 +9,7 @@ public enum ChampionshipStateEnum {
 
     private String value;
 
-    ChampionshipStateEnum(String value) {
+    ChampionshipStateEnumDocument(String value) {
         this.value = value;
     }
 

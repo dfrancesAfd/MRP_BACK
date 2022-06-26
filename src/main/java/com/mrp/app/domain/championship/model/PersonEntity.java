@@ -7,11 +7,10 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Championship {
-    private String id;
-    private String name;
-    private String startDate;
-    private String endDate;
-    private ChampionshipStateEnum state;
-
+public class PersonEntity {
+    private String firstName;
+    private String lastName;
+    private String email;
+    private String phoneNumber;
+    private String pseudo;
 }
