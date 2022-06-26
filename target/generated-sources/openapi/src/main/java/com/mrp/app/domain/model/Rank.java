@@ -5,6 +5,7 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.mrp.app.domain.model.Person;
+import java.math.BigDecimal;
 import org.openapitools.jackson.nullable.JsonNullable;
 import java.time.OffsetDateTime;
 import javax.validation.Valid;
@@ -19,7 +20,7 @@ import javax.annotation.Generated;
  * Rank
  */
 
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2022-05-07T23:29:09.273407+02:00[Europe/Paris]")
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2022-06-26T18:27:26.432347400+02:00[Europe/Paris]")
 public class Rank   {
 
   @JsonProperty("rank")
@@ -29,7 +30,7 @@ public class Rank   {
   private Person attendee;
 
   @JsonProperty("points")
-  private Integer points;
+  private BigDecimal points;
 
   public Rank rank(Integer rank) {
     this.rank = rank;
@@ -69,7 +70,7 @@ public class Rank   {
     this.attendee = attendee;
   }
 
-  public Rank points(Integer points) {
+  public Rank points(BigDecimal points) {
     this.points = points;
     return this;
   }
@@ -78,13 +79,13 @@ public class Rank   {
    * Get points
    * @return points
   */
-  
+  @Valid 
   @Schema(name = "points", required = false)
-  public Integer getPoints() {
+  public BigDecimal getPoints() {
     return points;
   }
 
-  public void setPoints(Integer points) {
+  public void setPoints(BigDecimal points) {
     this.points = points;
   }
 

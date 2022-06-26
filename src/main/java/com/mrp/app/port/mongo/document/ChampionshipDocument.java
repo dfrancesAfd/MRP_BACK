@@ -9,6 +9,8 @@ import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.ArrayList;
 
 @Data
@@ -19,8 +21,8 @@ public class ChampionshipDocument {
     @Id
     private String id;
     private String name;
-    private String startDate;
-    private String endDate;
+    private LocalDateTime startDate;
+    private LocalDateTime endDate;
     private ChampionshipStateEnumEntity state;
     private ArrayList<RoundDocument> rounds;
     private ArrayList<RankDocument> ranking;

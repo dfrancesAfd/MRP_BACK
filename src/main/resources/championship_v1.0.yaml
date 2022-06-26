@@ -191,4 +191,4 @@ components:
         attendee:
           $ref: '#/components/schemas/Person'
         points:
-          type: integer
+          type: number

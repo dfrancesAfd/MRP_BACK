@@ -86,7 +86,7 @@ public class ChampionshipSteps {
         StepVerifier.create(championshipEntityMono).assertNext(
                 c -> assertAll("Le championnat renvoyé ne possède pas les champs attendus",
                         () -> assertNotNull(c.getId()),
-                        () -> assertEquals(championships.get(championshipNumber).getEndDate(), c.getEndDate()),
+                        () -> assertEquals(championships.get(championshipNumber).getEndDate().toString(), c.getEndDate().toString()),
                         () -> assertEquals(championships.get(championshipNumber).getName(), c.getName()),
                         () -> assertEquals(championships.get(championshipNumber).getRanking(), c.getRanking()),
                         () -> assertEquals(championships.get(championshipNumber).getRounds(), c.getRounds()),

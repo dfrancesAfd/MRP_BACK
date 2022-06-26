@@ -21,7 +21,7 @@ import javax.annotation.Generated;
  * RankingToCreateDTO
  */
 
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2022-05-07T23:29:09.273407+02:00[Europe/Paris]")
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2022-06-26T18:27:26.432347400+02:00[Europe/Paris]")
 public class RankingToCreateDTO   {
 
   @JsonProperty("ranking")

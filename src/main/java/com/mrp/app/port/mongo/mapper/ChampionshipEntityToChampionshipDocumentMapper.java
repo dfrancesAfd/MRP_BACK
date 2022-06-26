@@ -18,8 +18,8 @@ public class ChampionshipEntityToChampionshipDocumentMapper {
         if(championshipEntity.getId() != null)
             championshipDocument.setId(championshipEntity.getId());
         championshipDocument.setName(championshipEntity.getName());
-        championshipDocument.setStartDate(championshipEntity.getStartDate());
-        championshipDocument.setEndDate(championshipEntity.getEndDate());
+        championshipDocument.setStartDate(championshipEntity.getStartDate().toLocalDateTime());
+        championshipDocument.setEndDate(championshipEntity.getEndDate().toLocalDateTime());
         championshipDocument.setRanking(rankEntityListToRankDocumentList(championshipEntity.getRanking()));
         championshipDocument.setRounds(roundEntityListToRoundDocumentList(championshipEntity.getRounds()));
         championshipDocument.setState(championshipEntity.getState());
@@ -64,7 +64,7 @@ public class ChampionshipEntityToChampionshipDocumentMapper {
         RoundDocument roundDocument = new RoundDocument();
         roundDocument.setRanking(rankEntityListToRankDocumentList(roundEntity.getRanking()));
         roundDocument.setAttendees(personEntityListToPersonDocumentList(roundEntity.getAttendees()));
-        roundDocument.setDate(roundEntity.getDate());
+        roundDocument.setDate(roundEntity.getDate().toLocalDateTime());
         roundDocument.setPlayers(personEntityListToPersonDocumentList(roundEntity.getPlayers()));
         return roundDocument;
     }

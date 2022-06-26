@@ -4,8 +4,6 @@ import java.net.URI;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import java.time.OffsetDateTime;
-import org.springframework.format.annotation.DateTimeFormat;
 import org.openapitools.jackson.nullable.JsonNullable;
 import java.time.OffsetDateTime;
 import javax.validation.Valid;
@@ -20,19 +18,17 @@ import javax.annotation.Generated;
  * ChampionshipToCreateDTO
  */
 
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2022-05-07T23:29:09.273407+02:00[Europe/Paris]")
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2022-06-26T18:27:26.432347400+02:00[Europe/Paris]")
 public class ChampionshipToCreateDTO   {
 
   @JsonProperty("name")
   private String name;
 
   @JsonProperty("startDate")
-  @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
-  private OffsetDateTime startDate;
+  private String startDate;
 
   @JsonProperty("endDate")
-  @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
-  private OffsetDateTime endDate;
+  private String endDate;
 
   public ChampionshipToCreateDTO name(String name) {
     this.name = name;
@@ -53,7 +49,7 @@ public class ChampionshipToCreateDTO   {
     this.name = name;
   }
 
-  public ChampionshipToCreateDTO startDate(OffsetDateTime startDate) {
+  public ChampionshipToCreateDTO startDate(String startDate) {
     this.startDate = startDate;
     return this;
   }
@@ -62,17 +58,17 @@ public class ChampionshipToCreateDTO   {
    * Get startDate
    * @return startDate
   */
-  @Valid 
+  
   @Schema(name = "startDate", required = false)
-  public OffsetDateTime getStartDate() {
+  public String getStartDate() {
     return startDate;
   }
 
-  public void setStartDate(OffsetDateTime startDate) {
+  public void setStartDate(String startDate) {
     this.startDate = startDate;
   }
 
-  public ChampionshipToCreateDTO endDate(OffsetDateTime endDate) {
+  public ChampionshipToCreateDTO endDate(String endDate) {
     this.endDate = endDate;
     return this;
   }
@@ -81,13 +77,13 @@ public class ChampionshipToCreateDTO   {
    * Get endDate
    * @return endDate
   */
-  @Valid 
+  
   @Schema(name = "endDate", required = false)
-  public OffsetDateTime getEndDate() {
+  public String getEndDate() {
     return endDate;
   }
 
-  public void setEndDate(OffsetDateTime endDate) {
+  public void setEndDate(String endDate) {
     this.endDate = endDate;
   }
 

@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import java.util.Optional;
 import javax.annotation.Generated;
 
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2022-05-07T23:29:09.273407+02:00[Europe/Paris]")
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2022-06-26T18:27:26.432347400+02:00[Europe/Paris]")
 @Controller
 @RequestMapping("${openapi.championnat.base-path:/v2}")
 public class ChampionshipsApiController implements ChampionshipsApi {

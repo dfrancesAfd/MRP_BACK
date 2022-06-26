@@ -1,5 +1,8 @@
-/home/symartinez/MRP_BACK/src/test/java/com/mrp/app/domain/championship/steps/ChampionshipSteps.java
-/home/symartinez/MRP_BACK/src/test/java/com/mrp/app/configurations/CucumberSpringContextConfiguration.java
-/home/symartinez/MRP_BACK/src/test/java/com/mrp/app/AppApplicationTests.java
-/home/symartinez/MRP_BACK/src/test/java/com/mrp/app/CucumberTest.java
-/home/symartinez/MRP_BACK/src/test/java/com/mrp/app/domain/championship/mapper/ChampionshipMapper.java
+C:\Users\Damien\Documents\MRP_BACK\src\test\java\com\mrp\app\domain\championship\generator\DomainChampionshipGenerator.java
+C:\Users\Damien\Documents\MRP_BACK\src\test\java\com\mrp\app\api\CreateChampionshipTest.java
+C:\Users\Damien\Documents\MRP_BACK\src\test\java\com\mrp\app\api\generator\ApiControllerGenerator.java
+C:\Users\Damien\Documents\MRP_BACK\src\test\java\com\mrp\app\domain\championship\steps\ChampionshipSteps.java
+C:\Users\Damien\Documents\MRP_BACK\src\test\java\com\mrp\app\AppApplicationTests.java
+C:\Users\Damien\Documents\MRP_BACK\src\test\java\com\mrp\app\configurations\CucumberSpringContextConfiguration.java
+C:\Users\Damien\Documents\MRP_BACK\src\test\java\com\mrp\app\domain\championship\mapper\ChampionshipMapper.java
+C:\Users\Damien\Documents\MRP_BACK\src\test\java\com\mrp\app\CucumberTest.java

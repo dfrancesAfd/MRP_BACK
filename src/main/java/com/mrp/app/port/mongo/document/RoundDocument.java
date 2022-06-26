@@ -6,6 +6,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDateTime;
 import java.time.OffsetDateTime;
 import java.util.ArrayList;
 
@@ -13,7 +14,7 @@ import java.util.ArrayList;
 @AllArgsConstructor
 @NoArgsConstructor
 public class RoundDocument {
-    private OffsetDateTime date;
+    private LocalDateTime date;
     private ArrayList<PersonDocument> attendees;
     private ArrayList<PersonDocument> players;
     private ArrayList<RankDocument> ranking;

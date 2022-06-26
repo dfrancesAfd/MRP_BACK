@@ -6,10 +6,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.mrp.app.domain.model.Person;
 import com.mrp.app.domain.model.Rank;
-import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.List;
-import org.springframework.format.annotation.DateTimeFormat;
 import org.openapitools.jackson.nullable.JsonNullable;
 import java.time.OffsetDateTime;
 import javax.validation.Valid;
@@ -24,12 +22,11 @@ import javax.annotation.Generated;
  * Round
  */
 
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2022-05-07T23:29:09.273407+02:00[Europe/Paris]")
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2022-06-26T18:27:26.432347400+02:00[Europe/Paris]")
 public class Round   {
 
   @JsonProperty("date")
-  @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
-  private OffsetDateTime date;
+  private String date;
 
   @JsonProperty("attendees")
   @Valid
@@ -43,7 +40,7 @@ public class Round   {
   @Valid
   private List<Rank> ranking = null;
 
-  public Round date(OffsetDateTime date) {
+  public Round date(String date) {
     this.date = date;
     return this;
   }
@@ -52,13 +49,13 @@ public class Round   {
    * Get date
    * @return date
   */
-  @Valid 
+  
   @Schema(name = "date", required = false)
-  public OffsetDateTime getDate() {
+  public String getDate() {
     return date;
   }
 
-  public void setDate(OffsetDateTime date) {
+  public void setDate(String date) {
     this.date = date;
   }
 

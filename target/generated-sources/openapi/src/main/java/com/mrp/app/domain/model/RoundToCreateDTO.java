@@ -4,8 +4,6 @@ import java.net.URI;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import java.time.OffsetDateTime;
-import org.springframework.format.annotation.DateTimeFormat;
 import org.openapitools.jackson.nullable.JsonNullable;
 import java.time.OffsetDateTime;
 import javax.validation.Valid;
@@ -20,14 +18,13 @@ import javax.annotation.Generated;
  * RoundToCreateDTO
  */
 
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2022-05-07T23:29:09.273407+02:00[Europe/Paris]")
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2022-06-26T18:27:26.432347400+02:00[Europe/Paris]")
 public class RoundToCreateDTO   {
 
   @JsonProperty("date")
-  @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
-  private OffsetDateTime date;
+  private String date;
 
-  public RoundToCreateDTO date(OffsetDateTime date) {
+  public RoundToCreateDTO date(String date) {
     this.date = date;
     return this;
   }
@@ -36,13 +33,13 @@ public class RoundToCreateDTO   {
    * Get date
    * @return date
   */
-  @Valid 
+  
   @Schema(name = "date", required = false)
-  public OffsetDateTime getDate() {
+  public String getDate() {
     return date;
   }
 
-  public void setDate(OffsetDateTime date) {
+  public void setDate(String date) {
     this.date = date;
   }
 

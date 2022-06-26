@@ -9,6 +9,7 @@ import com.mrp.app.port.mongo.document.PersonDocument;
 import com.mrp.app.port.mongo.document.RankDocument;
 import com.mrp.app.port.mongo.document.RoundDocument;
 
+import java.time.ZoneOffset;
 import java.util.ArrayList;
 
 public class ChampionshipDocumentToChampionshipEntityMapper {
@@ -16,8 +17,8 @@ public class ChampionshipDocumentToChampionshipEntityMapper {
     public void championshipDocumentToChampionshipEntity(ChampionshipDocument championshipDocument, ChampionshipEntity championshipEntity){
         championshipEntity.setId(championshipDocument.getId());
         championshipEntity.setName(championshipDocument.getName());
-        championshipEntity.setStartDate(championshipDocument.getStartDate());
-        championshipEntity.setEndDate(championshipDocument.getEndDate());
+        championshipEntity.setStartDate(championshipDocument.getStartDate().atOffset(ZoneOffset.UTC));
+        championshipEntity.setEndDate(championshipDocument.getEndDate().atOffset(ZoneOffset.UTC));
         championshipEntity.setRanking(rankDocumentListToRankEntityList(championshipDocument.getRanking()));
         championshipEntity.setRounds(roundDocumentListToRoundEntityList(championshipDocument.getRounds()));
         championshipEntity.setState(championshipDocument.getState());
@@ -61,7 +62,7 @@ public class ChampionshipDocumentToChampionshipEntityMapper {
         RoundEntity roundEntity = new RoundEntity();
         roundEntity.setRanking(rankDocumentListToRankEntityList(roundDocument.getRanking()));
         roundEntity.setAttendees(personDocumentListToPersonEntityList(roundDocument.getAttendees()));
-        roundEntity.setDate(roundDocument.getDate());
+        roundEntity.setDate(roundDocument.getDate().atOffset(ZoneOffset.UTC));
         roundEntity.setPlayers(personDocumentListToPersonEntityList(roundDocument.getPlayers()));
         return roundEntity;
     }

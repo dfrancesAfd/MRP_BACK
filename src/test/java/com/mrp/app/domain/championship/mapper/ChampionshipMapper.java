@@ -3,6 +3,7 @@ package com.mrp.app.domain.championship.mapper;
 import com.mrp.app.domain.championship.model.ChampionshipEntity;
 import com.mrp.app.domain.championship.model.ChampionshipStateEnumEntity;
 
+import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Map;
 
@@ -12,8 +13,8 @@ public class ChampionshipMapper {
 
         ChampionshipEntity result = new ChampionshipEntity();
         result.setName(maps.get(0).get("nameChampionship"));
-        result.setStartDate(maps.get(0).get("startDateChampionship"));
-        result.setEndDate(maps.get(0).get("endDateChampionship"));
+        result.setStartDate(OffsetDateTime.parse(maps.get(0).get("startDateChampionship")));
+        result.setEndDate(OffsetDateTime.parse(maps.get(0).get("endDateChampionship")));
         if(maps.get(0).get("stateChampionship") != null){
             result.setState(ChampionshipStateEnumEntity.valueOf(maps.get(0).get("stateChampionship")));
         };

@@ -1,5 +1,8 @@
-com/mrp/app/CucumberTest.class
-com/mrp/app/configurations/CucumberSpringContextConfiguration.class
-com/mrp/app/domain/championship/steps/ChampionshipSteps.class
-com/mrp/app/domain/championship/mapper/ChampionshipMapper.class
-com/mrp/app/AppApplicationTests.class
+com\mrp\app\domain\championship\mapper\ChampionshipMapper.class
+com\mrp\app\domain\championship\generator\DomainChampionshipGenerator.class
+com\mrp\app\AppApplicationTests.class
+com\mrp\app\api\CreateChampionshipTest.class
+com\mrp\app\api\generator\ApiControllerGenerator.class
+com\mrp\app\configurations\CucumberSpringContextConfiguration.class
+com\mrp\app\CucumberTest.class
+com\mrp\app\domain\championship\steps\ChampionshipSteps.class

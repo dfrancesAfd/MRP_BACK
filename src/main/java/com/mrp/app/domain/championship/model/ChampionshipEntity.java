@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.OffsetDateTime;
 import java.util.ArrayList;
 
 @Data
@@ -13,8 +14,8 @@ import java.util.ArrayList;
 public class ChampionshipEntity {
     private String id;
     private String name;
-    private String startDate;
-    private String endDate;
+    private OffsetDateTime startDate;
+    private OffsetDateTime endDate;
     private ChampionshipStateEnumEntity state;
     private ArrayList<RoundEntity> rounds;
     private ArrayList<RankEntity> ranking;
