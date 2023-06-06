@@ -3,28 +3,28 @@ os: linux
 
 files:
   - source: /
-    destination: /home/ubuntu/server
+    destination: /home/damien/server
 
 permissions:
   - object: /
     pattern: "**"
-    owner: ubuntu
-    group: ubuntu
+    owner: damien
+    group: damien
 
 hooks:
   BeforeInstall:
     - location: server_clear.sh
       timeout: 300
-      runas: ubuntu
+      runas: damien
   AfterInstall:
     - location: fix_privileges.sh
       timeout: 300
-      runas: ubuntu
+      runas: damien
   ApplicationStart:
     - location: server_start.sh
       timeout: 20
-      runas: ubuntu
+      runas: damien
   ApplicationStop:
     - location: server_stop.sh
       timeout: 20
-      runas: ubuntu
+      runas: damien
