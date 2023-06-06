@@ -6,7 +6,7 @@ phases:
       java: corretto17
   pre_build:
     commands:
-      - docker-compose up
+      - sudo docker-compose up
   build:
     commands:
       - mvn clean install
