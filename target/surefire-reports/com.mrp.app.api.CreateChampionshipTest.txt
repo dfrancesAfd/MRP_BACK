@@ -1,16 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.mrp.app.api.CreateChampionshipTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 3.172 s <<< FAILURE! - in com.mrp.app.api.CreateChampionshipTest
-create  Time elapsed: 0.343 s  <<< FAILURE!
-org.mockito.exceptions.verification.WantedButNotInvoked: 
-
-Wanted but not invoked:
-com.mrp.app.domain.championship.service.CreateChampionshipService#0.create(
-    <any com.mrp.app.domain.championship.model.ChampionshipEntity>
-);
--> at com.mrp.app.api.CreateChampionshipTest.create(CreateChampionshipTest.java:145)
-Actually, there were zero interactions with this mock.
-
-	at com.mrp.app.api.CreateChampionshipTest.create(CreateChampionshipTest.java:145)
-
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.407 s - in com.mrp.app.api.CreateChampionshipTest

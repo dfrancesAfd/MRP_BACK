@@ -23,7 +23,7 @@ import javax.annotation.Generated;
  * ChampionshipDTO
  */
 
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2022-06-26T18:27:26.432347400+02:00[Europe/Paris]")
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2023-06-06T10:12:34.400926600+02:00[Europe/Berlin]")
 public class ChampionshipDTO   {
 
   @JsonProperty("id")

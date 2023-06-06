@@ -95,4 +95,10 @@ public class ChampionshipSteps {
                 )
         ).verifyComplete();
     }
+
+    @Given("Une base de donnees ne contenant aucun Championnat existe")
+    public void une_base_de_donnees_ne_contenant_aucun_championnat_existe() {
+        // Write code here that turns the phrase above into concrete actions
+        championshipRepository.deleteAll();;
+    }
 }

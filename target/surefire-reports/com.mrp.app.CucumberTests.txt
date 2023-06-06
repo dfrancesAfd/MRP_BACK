@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
-Test set: com.mrp.app.AppApplicationTests
+Test set: com.mrp.app.CucumberTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.726 s - in com.mrp.app.AppApplicationTests
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.512 s - in com.mrp.app.CucumberTests
