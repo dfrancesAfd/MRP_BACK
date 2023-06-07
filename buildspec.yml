@@ -6,6 +6,7 @@ phases:
       java: corretto17
   build:
     commands:
+      - readlink -f $(which java) 
       - mvn clean install
   post_build:
     commands:
